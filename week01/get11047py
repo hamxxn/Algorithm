@@ -1,0 +1,12 @@
+num, total=map(int,input().split())
+coin=[]
+count=0
+for i in range(num):
+  coin.append(int(input()))
+coin.reverse()
+for i in coin:
+  x=total//i
+  if x!=0:
+    total%=i
+    count+=x
+print(count)
